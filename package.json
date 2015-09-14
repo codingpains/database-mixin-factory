@@ -1,0 +1,25 @@
+{
+  "name": "database-mixin-factory",
+  "description": "Factory of mixins to store in abstract db",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "tape ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codingpains/database-mixin-factory.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Gustavo Ortiz",
+    "email": "gustavo.ortiz.monroy@gmail.com",
+    "url": "http://medium.com/@codingpains"
+  },
+  "dependencies": {
+    "crispy-string": "0.0.2",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "tape": "^4.2.0"
+  }
+}
