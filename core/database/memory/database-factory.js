@@ -1,5 +1,4 @@
 'use strict';
-var _ = require('lodash');
 
 module.exports = function(dbnames, store) {
   var database = {};
