@@ -16,8 +16,7 @@
     "url": "http://medium.com/@codingpains"
   },
   "dependencies": {
-    "crispy-string": "0.0.2",
-    "lodash": "^3.10.1"
+    "crispy-string": "0.0.2"
   },
   "devDependencies": {
     "tape": "^4.2.0"
