@@ -1,6 +1,5 @@
 'use strict';
 const crispy = require('crispy-string');
-const _ = require('lodash');
 
 class AccountNotExistError extends Error {
   constructor(message) {
@@ -14,9 +13,9 @@ var AccountStorage = {
   collection: null,
 
   findAccountById(id, callback) {
-    let result = _.filter(this.collection, (account) => {
+    let result = this.collection.find((account) => {
       return account.id === id;
-    })[0];
+    });
 
     if (result) return callback(null, result);
 
