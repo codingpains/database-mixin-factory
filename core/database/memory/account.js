@@ -13,9 +13,9 @@ var AccountStorage = {
   collection: null,
 
   findAccountById(id, callback) {
-    let result = this.collection.filter((account) => {
+    let result = this.collection.find((account) => {
       return account.id === id;
-    })[0];
+    });
 
     if (result) return callback(null, result);
 

@@ -13,9 +13,9 @@ var UserStorage = {
   collection: null,
 
   findUserById(id, callback) {
-    let result = this.collection.filter((user) => {
+    let result = this.collection.find((user) => {
       return user.id === id;
-    })[0];
+    });
 
     if (result) return callback(null, result);
 
