@@ -21,6 +21,7 @@ test('should return usable methods for user storage', function(assert) {
   database.findUserById(1, function(error, data) {
     var expected = 'iddar';
     var actual = data.username;
+    console.log('Test data ', error, data);
     assert.equal(actual, expected);
 
     assert.end();

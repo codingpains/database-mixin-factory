@@ -1,5 +1,5 @@
 'use strict';
-const crispy = require('crispy-string');
+var crispy = require('crispy-string');
 
 class AccountNotExistError extends Error {
   constructor(message) {

@@ -2,15 +2,14 @@
 
 module.exports = function(dbnames, store) {
   var database = {};
+  var prop;
 
   dbnames.forEach((name) => {
     let db = require('./' + name)(store[name + 's']);
-
-    for(var prop in db) {
-      if (prop !== 'database') {
-        database[prop] = function() {
-          return db[prop].apply(db,  Array.prototype.slice.call(arguments));
-        }
+    for(prop in db) {
+      if (prop !== 'collection') {
+        var func = db[prop];
+        database[prop] = func.bind(db);
       }
     }
   });
